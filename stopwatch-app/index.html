@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            background: #8c52ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            width: 40%;
+            min-width: 500px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            padding: 20px 0;
+            padding-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
+            text-align: center;
+        }
+        .timer-display {
+            width: 92%;
+            background: #fff;
+            left: 4%;
+            font-family: 'Roboto mono', monospace;
+            color: #8c52ff;
+            font-size: 30px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
+            margin-bottom: 2rem;
+        }
+        .buttons button {
+            width: 120px;
+            height: 45px;
+            background-color: #8c52ff;
+            color: #fff;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            margin: 0.5rem;
+        }
+        .buttons button:nth-last-child(2) {
+            background-color: #e35209;
+        }
+        .buttons button:nth-last-child(1) {
+            background-color: #f7df1e;
+        }
+        .buttons button:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        }
+        .laps {
+            width: 90%;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .laps div {
+            background-color: #e9ecef;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-display">
+            00 : 00 : 00 : 000
+        </div>
+        <div class="buttons">
+            <button id="start-timer">Start</button>
+            <button id="pause-timer">Pause</button>
+            <button id="reset-timer">Reset</button>
+            <button id="lap-timer">Lap</button>
+        </div>
+        <div class="laps" id="laps">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
